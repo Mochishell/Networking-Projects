@@ -7,3 +7,5 @@ Testing my second commit from
 Linux.
 
 Testing my third commit from EXAMPLEL
+
+Testing a commit and push to remote branch1 
