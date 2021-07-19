@@ -8,11 +8,7 @@ from config_modules import create_vlans, config_general
 import getpass
 
 
-
-
-#read places the whole text file as one string into the variable
-#splitlines splits the text file into list items based on line breaks
-
+value = input("State what config you would like to configure: ")
 
 #probably only need 1 devices file
 with open('devices.txt') as f:
@@ -36,11 +32,8 @@ for host in devices:
     iosl2 = ConnectHandler(**device)
     output = iosl2.send_command('show ip int brief')
 
-    #creating vlans
-    create_vlans(iosl2, 1, 11)
-
     #takes a general config file and configures it for
     #the list of devices in devices.txt
-    config_general(iosl2, 'ospf', 'config_ospf.cfg')
+    config_general(iosl2, value, 'config_{}'.format(value) + '.cfg')
 
 
