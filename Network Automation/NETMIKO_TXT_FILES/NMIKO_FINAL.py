@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 
+#this file is mostly for testing out modules defined in
+#config_modueles.py
+
 from netmiko import ConnectHandler
 from config_modules import create_vlans, config_general
 import getpass
 
-#basic script, ensure a connection can be made
-#to switch 1
+
 
 
 #read places the whole text file as one string into the variable
@@ -40,4 +42,5 @@ for host in devices:
     #takes a general config file and configures it for
     #the list of devices in devices.txt
     config_general(iosl2, 'ospf', 'config_ospf.cfg')
+
 
