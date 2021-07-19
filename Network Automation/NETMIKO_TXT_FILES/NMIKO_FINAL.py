@@ -18,7 +18,7 @@ with open('devices.txt') as f:
 
 for host in devices:
 
-    #creating a list, from the device
+    #creating a list of lists, which each item is a deivce
     switchX = host.split(', ')
 
     device = {
@@ -36,5 +36,8 @@ for host in devices:
 
     #creating vlans
     create_vlans(iosl2, 1, 11)
+
+    #takes a general config file and configures it for
+    #the list of devices in devices.txt
     config_general(iosl2, 'ospf', 'config_ospf.cfg')
 
