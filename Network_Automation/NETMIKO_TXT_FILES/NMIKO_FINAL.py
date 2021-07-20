@@ -7,8 +7,8 @@ from netmiko import ConnectHandler
 from config_modules import create_vlans, config_general
 import getpass
 
-
-value = input("State what config you would like to configure: ")
+#accepts the name of a file instead
+config_file = input("Please input the file containing config commands:  ")
 
 #probably only need 1 devices file
 with open('devices.txt') as f:
@@ -34,6 +34,6 @@ for host in devices:
 
     #takes a general config file and configures it for
     #the list of devices in devices.txt
-    config_general(iosl2, value, 'config_{}'.format(value) + '.cfg')
+    config_general(iosl2, config_file)
 
 
