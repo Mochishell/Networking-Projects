@@ -5,7 +5,7 @@ def create_vlans(device, lower, upper):
 
 def config_general(device, config_file):
     with open(config_file) as f:
-        print('configuring using {}\n'.format(config_file))
+        print('\nconfiguring using {}'.format(config_file))
         commands = f.read().splitlines()
         print(device.send_config_set(commands))
 
