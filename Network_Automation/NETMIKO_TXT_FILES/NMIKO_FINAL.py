@@ -29,7 +29,6 @@ for host in devices:
         'password': switchX[2]
     }
 
-
     #running the below line inputs the username/password
     #specified in the dictionary when sshing
     iosl2 = ConnectHandler(**device)
