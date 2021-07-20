@@ -8,7 +8,10 @@ from config_modules import create_vlans, config_general
 import getpass
 
 #accepts the name of a file instead
-config_file = input("Please input the file containing config commands:  ")
+config_file = input("Please input the files containing config commands:")
+
+#splitting user input into a list of config_file names
+list_files = config_file.split()
 
 #probably only need 1 devices file
 with open('devices.txt') as f:
@@ -32,8 +35,7 @@ for host in devices:
     iosl2 = ConnectHandler(**device)
     output = iosl2.send_command('show ip int brief')
 
-    #takes a general config file and configures it for
-    #the list of devices in devices.txt
-    config_general(iosl2, config_file)
+    for file_name in list_files:
+        config_general(iosl2, file_name)
 
 
