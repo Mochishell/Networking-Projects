@@ -12,6 +12,21 @@ def config_general(device, config_file):
 
 #returns a list devices
 def read_devices(device_file):
-    with open('devices.txt') as f:
+    with open(device_file) as f:
+        device_dict = {}
         devices = f.read().splitlines()
-        return devices
+
+        for host in devices:
+
+            #creating a list, where each item is some aspect of that device
+            switchX = host.split(', ')
+
+            #converting the list into a dictionary
+            device = {
+
+                'ipaddr': switchX[0],
+                'type': switchX[1],
+                'name': switchX[2]
+            }
+            device_dict[device['ipaddr']] = device
+        return device_dict
