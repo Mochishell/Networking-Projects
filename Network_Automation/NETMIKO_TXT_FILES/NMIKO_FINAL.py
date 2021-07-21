@@ -32,7 +32,6 @@ for host in devices:
     #running the below line inputs the username/password
     #specified in the dictionary when sshing
     iosl2 = ConnectHandler(**device)
-    output = iosl2.send_command('show ip int brief')
 
     for file_name in list_files:
         config_general(iosl2, file_name)
