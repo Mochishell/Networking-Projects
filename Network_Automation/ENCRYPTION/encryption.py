@@ -7,9 +7,11 @@ import getpass
 import json
 
 devices_dict = config_modules.read_devices('devices.txt')
+
+#should print a dictionary of dictionaries
 print(config_modules.get_device_creds('password.txt-encrypted', 'cisco'))
 
-#TODO: decrypt password file and turn it into a dictionary
+
 
 
 
