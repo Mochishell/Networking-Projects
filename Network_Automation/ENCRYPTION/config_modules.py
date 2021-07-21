@@ -42,5 +42,7 @@ def read_devices(device_file):
 #returns dictionary of device credentials per ip for encrypted password_file
 def get_device_creds(encrypted_password_file, key):
     with open(encrypted_password_file, 'rb') as file:
-        #todo: convert encrypted file back into list
+        #todo: convert encrypted file back into list and format into dictionary
         decrypted_file = json.loads(decrypt(key, file.read()))
+        return decrypted_file
+
