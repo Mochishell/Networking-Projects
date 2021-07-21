@@ -4,8 +4,10 @@
 from netmiko import ConnectHandler
 from config_modules import create_vlans, config_general, read_devices
 import getpass
+import json
 
 devices = read_devices('devices.txt')
+device_dict = {}
 for host in devices:
 
     #creating a list, where each item is some aspect of that device
@@ -19,10 +21,15 @@ for host in devices:
         'password': switchX[2]
     }
 
+    #dictionary of devices, where each value per key is a dictionary containing device info
+    #key is the device IP address
+    device_dict[device['host']] = device
+
     #running the below line inputs the username/password
     #specified in the dictionary when sshing
     iosl2 = ConnectHandler(**device)
-    print(iosl2.send_command('sh ip int brief'))
+
+print (json.dumps(device_dict, indent = 4))
 
 
 
