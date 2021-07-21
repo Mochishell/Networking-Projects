@@ -2,13 +2,14 @@
 
 from simplecrypt import encrypt, decrypt
 from netmiko import ConnectHandler
-from config_modules import create_vlans, config_general, read_devices
+import config_modules
 import getpass
 import json
 
-devices_dict = read_devices('devices.txt')
-print(devices_dict)
+devices_dict = config_modules.read_devices('devices.txt')
+print(config_modules.get_device_creds('password.txt-encrypted', 'cisco'))
 
+#TODO: decrypt password file and turn it into a dictionary
 
 
 

@@ -1,8 +1,16 @@
+from simplecrypt import encrypt, decrypt
+from netmiko import ConnectHandler
+import config_modules
+import getpass
+import json
+
+
 def create_vlans(device, lower, upper):
     for x in range(1, 11):
         output = device.send_config_set(['vlan {}'.format(x), 'name pythonVLAN{}'.format(x)])
         print(output)
 
+#configures a device with specified config_file
 def config_general(device, config_file):
 
     with open(config_file) as f:
@@ -10,7 +18,7 @@ def config_general(device, config_file):
         commands = f.read().splitlines()
         print(device.send_config_set(commands))
 
-#returns a list devices
+#returns a dictionary of devices, key is ip address of device
 def read_devices(device_file):
     with open(device_file) as f:
         device_dict = {}
@@ -30,3 +38,9 @@ def read_devices(device_file):
             }
             device_dict[device['ipaddr']] = device
         return device_dict
+
+#returns dictionary of device credentials per ip for encrypted password_file
+def get_device_creds(encrypted_password_file, key):
+    with open(encrypted_password_file, 'rb') as file:
+        #todo: convert encrypted file back into list
+        decrypted_file = json.loads(decrypt(key, file.read()))
