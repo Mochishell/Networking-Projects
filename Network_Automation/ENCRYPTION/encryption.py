@@ -3,6 +3,8 @@
 
 from netmiko import ConnectHandler
 from config_modules import create_vlans, config_general, read_devices
+from simplecrypt import encrypt, decrypt
+import csv
 import getpass
 import json
 
@@ -15,18 +17,18 @@ for host in devices:
 
     #converting the list into a dictionary
     device = {
-        'device_type': 'cisco_ios',
-        'host': switchX[0],
-        'username': switchX[1],
-        'password': switchX[2]
+
+        'ipaddr': switchX[0],
+        'type': switchX[1],
+        'name': switchX[2]
     }
 
     #adding device to master dictionary, key is ip of device
-    device_dict[device['host']] = device
+    device_dict[device['ipaddr']] = device
 
     #running the below line inputs the username/password
     #specified in the dictionary when sshing
-    iosl2 = ConnectHandler(**device)
+    #iosl2 = ConnectHandler(**device)
 
 print (json.dumps(device_dict, indent = 4))
 
