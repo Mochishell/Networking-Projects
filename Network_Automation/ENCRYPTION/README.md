@@ -1,0 +1,1 @@
+This directory branches off NETMIKO_TXT_FILES to try and tinker with device encryption.
