@@ -21,8 +21,7 @@ for host in devices:
         'password': switchX[2]
     }
 
-    #dictionary of devices, where each value per key is a dictionary containing device info
-    #key is the device IP address
+    #adding device to master dictionary, key is ip of device
     device_dict[device['host']] = device
 
     #running the below line inputs the username/password
