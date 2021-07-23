@@ -55,7 +55,9 @@ def get_device_creds(encrypted_password_file, key):
         return cred_dict
 
 #Writes the running config for each device in devices_txt to a separate file
-def get_device_config(devices_dict, devices_creds):
+#devices_dict: dictionary of dictionaries, key is IP Address
+#devices_creds: dictionary of dictionaries, key is IP address
+def get_devices_config(devices_dict, devices_creds):
 
     for device_ip in devices_dict.keys():
 
@@ -72,4 +74,19 @@ def get_device_config(devices_dict, devices_creds):
         with open( "{}".format(devices_dict[device_ip]['name']) + '.cfg', 'w') as f:
             print('Writing running config to file {}'.format(devices_dict[device_ip]['name']) + '.cfg')
             f.write(session.send_command('sh run'))
+
+#Method intended to run as a thread
+#device: dictionary of device details,
+#device_creds: dictionary: username, password of device
+def get_device_config_thread(device, device_creds):
+    IP = device['ipaddr']
+    creds = device_creds
+    session = ConnectHandler( device_type=device['type'], ip=device['ipaddr'],
+                                username=creds['username'],
+                                password=creds['password'] )
+    with open( "{}".format(device['name']) + '.cfg', 'w') as f:
+            print('Writing running config to file {}'.format(device['name']) + '.cfg')
+            f.write(session.send_command('sh run'))
+
+
 

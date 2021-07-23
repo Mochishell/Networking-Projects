@@ -17,6 +17,7 @@ user_password_input = input("Please input your encrypted password file: ")
 user_encryption_key = input("Please input your encryption/decryption key: ")
 
 devices_creds = config_modules.get_device_creds(user_password_input, user_encryption_key)
+
 config_modules.get_device_config(devices_dict, devices_creds)
 
 
