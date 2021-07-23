@@ -7,6 +7,9 @@ import config_modules
 import getpass
 import json
 import threading
+from multiprocessing.dummy import Pool as ThreadPool
+#limiting number of threads
+num_threads = 5
 #creating dictionary of devices, where each device is also a dictionary
 #creating a dictionary of device, where each device is also a dictionary
 #separates passwords
@@ -22,20 +25,18 @@ devices_creds = config_modules.get_device_creds(user_password_input, user_encryp
 #config_modules.get_devices_config(devices_dict, devices_creds)
 
 config_threads_list = []
+config_param_list = []
 #each item(device) is itself a dictioanry
 for item in devices_dict:
-    print('Creating thread for {}'.format(item))
-    config_threads_list.append(threading.Thread( target = config_modules.get_device_config_thread, args = (devices_dict[item],
-                                                devices_creds[devices_dict[item]['ipaddr']])))
+    config_param_list.append( (devices_dict[item], devices_creds[item]))
 
-print ("Beginning threading")
 
-for config_thread in config_threads_list:
-    config_thread.start()
-for config_thread in config_threads_list:
-    config_thread.join()
+#creating thread pool, need to use starmap instead of map for methods with multiple arguments
+threads = ThreadPool(num_threads)
+final = threads.starmap(config_modules.get_device_config_thread, config_param_list)
 
-print ("Ending threading")
+threads.close()
+threads.join()
 
 
 
