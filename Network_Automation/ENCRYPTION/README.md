@@ -1,4 +1,4 @@
-#Description
+# Description
 This is a branch off *Network_Automation/NETMIKO_TXT_FILES* to showcase NETMIKO, password file encryption, and multi-threading to improve performance. This project primarily uses encryption.py and multi_threading.py for execution.
 
 File names are hard-coded for simplicity, so if you'd like to tinker with some of the passwords/IP addresses of devices, you should edit *password.txt* and *devices.txt*
@@ -9,14 +9,14 @@ Credits to David Bombal's 'Python for Network Engineers' course on Udemy for gui
 
 NETMIKO documentation/supported device types can be found [here](https://github.com/ktbyers/netmiko)
 
-#Assumptions
+# Assumptions
 - Only Cisco IOS/IOSv devices are in the topology
 - The password file is named *password.txt*
 - The devices file is named *devices.txt*
 - Script is ran in an environment with connection to IPs specified in *devices.txt* and *password.txt*
 
 
-#Usage
+# Usage
 1. Encrypt password.txt using encrypt_file.py. Example would be `$ python3 encrypt_file.py`. Input your encryption key. Creates an encrypted password file titled *password.txt-encrypted*
 
 2. Run *multi_threading.py* `$ python3 multi_threading.py` and input your encryption key
