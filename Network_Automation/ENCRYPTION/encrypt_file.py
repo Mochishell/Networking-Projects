@@ -21,8 +21,13 @@ decrypted_file_name = '{}-decrypted'.format(user_input)
 
 with open(encrypted_file_name, 'wb') as file:
     file.write(encrypt(user_key, json.dumps(device_creds_list)))
+    print("File has been encrypted into {}".format(encrypted_file_name))
 
-with open(encrypted_file_name, 'rb') as file:
-    decrypted_file = json.loads( decrypt( user_key, file.read()))
-    print(decrypted_file)
+#creates decrypted file as well for comparison
+#TODO: make comparison function that compares decrypted file to original password file
+#with open(encrypted_file_name, 'rb') as file:
+
+#   decrypted_file = json.loads( decrypt( user_key, file.read()))
+
+
 

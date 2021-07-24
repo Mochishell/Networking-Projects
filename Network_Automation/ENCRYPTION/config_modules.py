@@ -50,7 +50,7 @@ def get_device_creds(encrypted_password_file, key):
         try:
             decrypted_file = json.loads(decrypt(key, file.read()))
         except(DecryptionException):
-            print('Bad password or corrupt data. Exiting script.')
+            print('Bad encryption key or corrupt data. Exiting script.')
             exit()
 
         cred_dict = {}
