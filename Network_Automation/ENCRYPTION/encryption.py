@@ -1,36 +1,30 @@
 #!/usr/bin/env python
 
-
-from netmiko import ConnectHandler
-from config_modules import create_vlans, config_general, read_devices
+#assumes only cisco ios devices
 from simplecrypt import encrypt, decrypt
-import csv
+from netmiko import ConnectHandler
+import config_modules
 import getpass
 import json
 
-devices = read_devices('devices.txt')
-device_dict = {}
-for host in devices:
+#creating dictionary of devices, where each device is also a dictionary
+user_input = input("Please input a file containing devices: ")
+devices_dict = config_modules.read_devices(user_input)
 
-    #creating a list, where each item is some aspect of that device
-    switchX = host.split(', ')
+#creating a dictionary of device, where each device is also a dictionary
+#separates passwords
+user_password_input = input("Please input your encrypted password file: ")
+user_encryption_key = input("Please input your encryption/decryption key: ")
 
-    #converting the list into a dictionary
-    device = {
+devices_creds = config_modules.get_device_creds(user_password_input, user_encryption_key)
 
-        'ipaddr': switchX[0],
-        'type': switchX[1],
-        'name': switchX[2]
-    }
+config_modules.get_device_config(devices_dict, devices_creds)
 
-    #adding device to master dictionary, key is ip of device
-    device_dict[device['ipaddr']] = device
 
-    #running the below line inputs the username/password
-    #specified in the dictionary when sshing
-    #iosl2 = ConnectHandler(**device)
 
-print (json.dumps(device_dict, indent = 4))
+
+
+
 
 
 
