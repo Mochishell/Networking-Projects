@@ -13,14 +13,14 @@ num_threads = 5
 #creating dictionary of devices, where each device is also a dictionary
 #creating a dictionary of device, where each device is also a dictionary
 #separates passwords
-user_input = input("Please input a file containing devices: ")
-user_password_input = input("Please input your encrypted password file: ")
-user_encryption_key = input("Please input your encryption/decryption key: ")
+file_input = "devices.txt"
+password_input = "password-encrypted.txt"
+encryption_key = "cisco"
 
 
 
-devices_dict = config_modules.read_devices(user_input)
-devices_creds = config_modules.get_device_creds(user_password_input, user_encryption_key)
+devices_dict = config_modules.read_devices(file_input)
+devices_creds = config_modules.get_device_creds(password_input, encryption_key)
 
 #config_modules.get_devices_config(devices_dict, devices_creds)
 

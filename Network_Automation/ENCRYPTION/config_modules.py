@@ -4,9 +4,9 @@ import config_modules
 import getpass
 import json
 
-
+#function that creates vlans for a given device
 def create_vlans(device, lower, upper):
-    for x in range(1, 11):
+    for x in range(lower, upper):
         output = device.send_config_set(['vlan {}'.format(x), 'name pythonVLAN{}'.format(x)])
         print(output)
 
@@ -75,7 +75,7 @@ def get_devices_config(devices_dict, devices_creds):
             print('Writing running config to file {}'.format(devices_dict[device_ip]['name']) + '.cfg')
             f.write(session.send_command('sh run'))
 
-#Method intended to run as a thread
+#Method intended to run as a thread (for a single device)
 #device: dictionary of device details,
 #device_creds: dictionary: username, password of device
 def get_device_config_thread(device, device_creds):
