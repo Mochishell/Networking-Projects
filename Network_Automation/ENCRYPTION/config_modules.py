@@ -1,4 +1,4 @@
-from simplecrypt import encrypt, decrypt
+from simplecrypt import encrypt, decrypt, DecryptionException
 from netmiko import ConnectHandler
 import config_modules
 import getpass
@@ -46,7 +46,13 @@ def read_devices(device_file):
 def get_device_creds(encrypted_password_file, key):
     with open(encrypted_password_file, 'rb') as file:
         #todo: convert encrypted file back into list and format into dictionary
-        decrypted_file = json.loads(decrypt(key, file.read()))
+
+        try:
+            decrypted_file = json.loads(decrypt(key, file.read()))
+        except(DecryptionException):
+            print('Bad password or corrupt data. Exiting script.')
+            exit()
+
         cred_dict = {}
 
         for device in decrypted_file:
@@ -85,7 +91,8 @@ def get_device_config_thread(device, device_creds):
                                 username=creds['username'],
                                 password=creds['password'] )
     with open( "{}".format(device['name']) + '.cfg', 'w') as f:
-            print('Writing running config to file {}'.format(device['name']) + '.cfg')
+            print('Connecting to {} '.format(device['ipaddr']))
+            print('Writing running config to file {}'.format(device['name']) + '.cfg\n')
             f.write(session.send_command('sh run'))
 
 

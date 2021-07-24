@@ -1,5 +1,5 @@
 #skeleton code from david bombal
-
+#encrypts a file
 from netmiko import ConnectHandler
 from config_modules import create_vlans, config_general, read_devices
 from simplecrypt import encrypt, decrypt
@@ -7,10 +7,11 @@ import csv
 import getpass
 import json
 
-user_input = input("\nName you file that you'd like encrypted: ") or 'password.txt'
-user_key = input('Input your encryption key: ') or 'cisco'
+#making the password.txt file static for simplicity
+user_input = 'password.txt'
+user_key = getpass.getpass('Input your encryption key: ') or 'cisco'
 
-#now, need to encrypt the file
+#creates an encrypted file, also creates a decrypted file as well, should be the same as the original
 with open(user_input, 'r') as file:
     device_creds_reader = csv.reader(file, delimiter = ',')
     device_creds_list = [device for device in device_creds_reader]

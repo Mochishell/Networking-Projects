@@ -10,12 +10,13 @@ import threading
 from multiprocessing.dummy import Pool as ThreadPool
 #limiting number of threads
 num_threads = 5
+
 #creating dictionary of devices, where each device is also a dictionary
 #creating a dictionary of device, where each device is also a dictionary
 #separates passwords
 file_input = "devices.txt"
-password_input = "password-encrypted.txt"
-encryption_key = "cisco"
+password_input = "password.txt-encrypted"
+encryption_key = getpass.getpass('Please input your encryption_key: ')
 
 
 
