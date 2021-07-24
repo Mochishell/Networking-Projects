@@ -95,5 +95,7 @@ def get_device_config_thread(device, device_creds):
             print('Writing running config to file {}'.format(device['name']) + '.cfg\n')
             f.write(session.send_command('sh run'))
 
+#TODO: make comparison function that compares decrypted file to original password file
+
 
 
