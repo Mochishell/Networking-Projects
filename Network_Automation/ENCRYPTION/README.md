@@ -11,6 +11,7 @@ NETMIKO documentation/supported device types can be found [here](https://github.
 
 # Assumptions
 - Only Cisco IOS/IOSv devices are in the topology
+- Devices in devices.txt have SSH enabled.
 - The password file is named *password.txt*
 - The devices file is named *devices.txt*
 - Script is ran in an environment with connection to IPs specified in *devices.txt* and *password.txt*
