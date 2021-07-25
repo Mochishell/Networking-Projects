@@ -11,8 +11,10 @@ def create_vlans(device, lower, upper):
         print(output)
 
 #configures a device with specified config_file
+#assumes session has already been setup
 def config_general(device, config_file):
-
+    
+    
     with open(config_file) as f:
         print('\nconfiguring using {}'.format(config_file))
         commands = f.read().splitlines()
