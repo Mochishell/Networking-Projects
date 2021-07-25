@@ -1,11 +1,2 @@
 # Networking-Projects
-This repository will be where I store my python files for testing with NETMIKO, Napalm.
-
-Testing my first commit.
-
-Testing my second commit from
-Linux.
-
-Testing my third commit from EXAMPLEL
-
-Testing a commit and push to remote branch1 
+This repo will be where I store my projects throughout my career that I develop both on my own time and at work. Currently, *Networking-Projects/Encryption* is sufficiently documented for testing in your own envrironment. 
