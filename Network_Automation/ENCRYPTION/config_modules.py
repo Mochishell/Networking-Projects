@@ -10,15 +10,15 @@ def create_vlans(device, lower, upper):
         output = device.send_config_set(['vlan {}'.format(x), 'name pythonVLAN{}'.format(x)])
         print(output)
 
-#configures a device with specified config_file
+#configures a device ( the currently running session) with specified config_file
 #assumes session has already been setup
-def config_general(device, config_file):
+def config_general(session, config_file):
     
     
     with open(config_file) as f:
         print('\nconfiguring using {}'.format(config_file))
         commands = f.read().splitlines()
-        print(device.send_config_set(commands))
+        print(session.send_config_set(commands))
 
 #returns a dictionary of devices, key is ip address of device
 #each device is also a dictionary
