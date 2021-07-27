@@ -11,5 +11,6 @@ devices_creds = config_modules.get_device_creds_unencrypted('password.txt')
 #keys are ip addresses
 for device in devices_dict:
     config_modules.debug_arp_cache(devices_dict[device], devices_creds[device])
+    config_modules.debug_running_config(devices_dict[device], devices_creds[device])
 #writing arp table output to file
 

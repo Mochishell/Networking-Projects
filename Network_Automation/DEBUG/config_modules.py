@@ -90,6 +90,15 @@ def debug_arp_cache(device, device_creds):
     with open('{}_arp.txt'.format(device['name']), 'w') as f:
         print('\n Writing to file arp cache for {}'.format(device['name']))
         f.write(session.send_command('sh arp'))
+
+def debug_running_config(device, device_creds):
+    session = ConnectHandler( device_type=device['type'], ip=device['ipaddr'],
+                                username=device_creds['username'],
+                                password=device_creds['password'])
+
+    with open('{}_arp.txt'.format(device['name']), 'w') as f:
+        print('\n Writing to file running config for {}'.format(device['name']))
+        f.write(session.send_command('sh run'))
 #TODO: make comparison function that compares decrypted file to original password file
 
 
