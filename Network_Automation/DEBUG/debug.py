@@ -10,7 +10,12 @@ devices_creds = config_modules.get_device_creds_unencrypted('password.txt')
 
 #keys are ip addresses
 for device in devices_dict:
-    config_modules.debug_arp_cache(devices_dict[device], devices_creds[device])
-    config_modules.debug_running_config(devices_dict[device], devices_creds[device])
-#writing arp table output to file
+
+    session = ConnectHandler( device_type=devices_dict[device]['type'], ip=devices_dict[device]['ipaddr'] ,
+                                username=devices_creds[device]['username'], password=devices_creds[device]['password'])
+
+    config_modules.debug_arp_cache(session)
+    config_modules.debug_running_config(session)
+
+#TODO:
 

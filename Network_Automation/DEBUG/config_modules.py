@@ -6,12 +6,12 @@ import json
 import csv
 
 #configures a device with specified config_file
-def config_general(device, config_file):
+def config_general(session, config_file):
 
     with open(config_file) as f:
         print('\nconfiguring using {}'.format(config_file))
         commands = f.read().splitlines()
-        print(device.send_config_set(commands))
+        print(session.send_config_set(commands))
 
 #returns a dictionary of devices, key is ip address of device
 #each device is also a dictionary
@@ -81,25 +81,20 @@ def get_device_config_thread(device, device_creds):
 
 #sends sh arp command and writes it to file
 #takes device and device_creds are both dictionaries
-def debug_arp_cache(device, device_creds):
-    session = ConnectHandler( device_type=device['type'], ip=device['ipaddr'],
-                                username=device_creds['username'],
-                                password=device_creds['password'] )
+#session.ip not working
+def debug_arp_cache(session):
 
     #writing arp table output to file for this device
-    with open('{}_arp.txt'.format(device['name']), 'w') as f:
-        print('\n Writing to file arp cache for {}'.format(device['name']))
-        f.write(session.send_command('sh arp'))
+    with open('{}_arp.txt'.format(session.host), 'w') as f:
+        print('\n Writing to file arp cache for {}'.format(session.host))
+        f.write(session.send_command('show arp'))
 
-def debug_running_config(device, device_creds):
-    session = ConnectHandler( device_type=device['type'], ip=device['ipaddr'],
-                                username=device_creds['username'],
-                                password=device_creds['password'])
+def debug_running_config(session):
 
-    with open('{}_arp.txt'.format(device['name']), 'w') as f:
-        print('\n Writing to file running config for {}'.format(device['name']))
-        f.write(session.send_command('sh run'))
-#TODO: make comparison function that compares decrypted file to original password file
+    with open('{}_running_config.txt'.format(session.host), 'w') as f:
+        print('\n Writing to file running config for {}'.format(session.host))
+        f.write(session.send_command('show run'))
+e
 
 
 
