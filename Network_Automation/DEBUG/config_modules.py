@@ -3,7 +3,7 @@ from netmiko import ConnectHandler
 import config_modules
 import getpass
 import json
-
+import csv
 #function that creates vlans for a given device
 def create_vlans(device, lower, upper):
     for x in range(lower, upper):
@@ -59,6 +59,15 @@ def get_device_creds(encrypted_password_file, key):
             #format of list item is IP, username, password
             cred_dict[device[0]] = {'username': device[1], 'password': device[2]}
         return cred_dict
+
+#Does the same thing as get_device_creds, but assumed unencrypted password file
+def get_device_creds_unencrypted(password_file):
+    with open( password_file ) as f:
+        devices = csv.reader(f)
+        password_dict = {}
+        for row in devices:
+            password_dict[row[0]] = {'username': row[1], 'password': row[2]}
+        return password_dict
 
 #Writes the running config for each device in devices_txt to a separate file
 #devices_dict: dictionary of dictionaries, key is IP Address
