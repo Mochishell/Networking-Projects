@@ -94,7 +94,7 @@ def debug_running_config(session):
     with open('{}_running_config.txt'.format(session.host), 'w') as f:
         print('\n Writing to file running config for {}'.format(session.host))
         f.write(session.send_command('show run'))
-e
+
 
 
 

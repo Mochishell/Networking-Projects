@@ -2,8 +2,10 @@ from netmiko import ConnectHandler
 import config_modules
 import getpass
 import json
+import logging
 
-#start small, active debug probably won't work, lets try to just do show commands and save them to files
+logging.basicConfig(filename='test.log', level=logging.DEBUG)
+logger = logging.getLogger("netmiko")
 
 devices_dict = config_modules.read_devices('devices.txt')
 devices_creds = config_modules.get_device_creds_unencrypted('password.txt')
