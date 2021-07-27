@@ -4,11 +4,6 @@ import config_modules
 import getpass
 import json
 import csv
-#function that creates vlans for a given device
-def create_vlans(device, lower, upper):
-    for x in range(lower, upper):
-        output = device.send_config_set(['vlan {}'.format(x), 'name pythonVLAN{}'.format(x)])
-        print(output)
 
 #configures a device with specified config_file
 def config_general(device, config_file):
@@ -69,26 +64,6 @@ def get_device_creds_unencrypted(password_file):
             password_dict[row[0]] = {'username': row[1], 'password': row[2]}
         return password_dict
 
-#Writes the running config for each device in devices_txt to a separate file
-#devices_dict: dictionary of dictionaries, key is IP Address
-#devices_creds: dictionary of dictionaries, key is IP address
-def get_devices_config(devices_dict, devices_creds):
-
-    for device_ip in devices_dict.keys():
-
-        session = ConnectHandler( device_type=devices_dict[device_ip]['type'], ip=devices_dict[device_ip]['ipaddr'],
-                                username=devices_creds[device_ip]['username'],
-                                password=devices_creds[device_ip]['password'] )
-
-
-
-        if devices_dict[device_ip]['type'] == 'cisco_ios':
-            print ('this is a cisco router')
-
-        #writing to file the running config of the current switch, file name corresponds to switch
-        with open( "{}".format(devices_dict[device_ip]['name']) + '.cfg', 'w') as f:
-            print('Writing running config to file {}'.format(devices_dict[device_ip]['name']) + '.cfg')
-            f.write(session.send_command('sh run'))
 
 #Method intended to run as a thread (for a single device)
 #device: dictionary of device details,
@@ -104,6 +79,17 @@ def get_device_config_thread(device, device_creds):
             print('Writing running config to file {}'.format(device['name']) + '.cfg\n')
             f.write(session.send_command('sh run'))
 
+#sends sh arp command and writes it to file
+#takes device and device_creds are both dictionaries
+def debug_arp_cache(device, device_creds):
+    session = ConnectHandler( device_type=device['type'], ip=device['ipaddr'],
+                                username=device_creds['username'],
+                                password=device_creds['password'] )
+
+    #writing arp table output to file for this device
+    with open('{}_arp.txt'.format(device['name']), 'w') as f:
+        print('\n Writing to file arp cache for {}'.format(device['name']))
+        f.write(session.send_command('sh arp'))
 #TODO: make comparison function that compares decrypted file to original password file
 
 
