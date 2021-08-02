@@ -23,7 +23,7 @@ def read_devices(device_file):
         for host in devices:
 
             #creating a list, where each item is some aspect of that device
-            switchX = host.split(', ')
+            switchX = host.split(',')
 
             #converting the list into a dictionary
             device = {

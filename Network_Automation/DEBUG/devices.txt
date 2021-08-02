@@ -1,1 +1,1 @@
-/root/Networking-Projects/Network_Automation/devices.txt
+../devices.txt
