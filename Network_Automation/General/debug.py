@@ -10,6 +10,7 @@ logger = logging.getLogger("netmiko")
 devices_dict = config_modules.read_devices('devices.txt')
 devices_creds = config_modules.get_device_creds_unencrypted('password.txt')
 
+#need to load IP addresses from file
 #keys are ip addresses
 for device in devices_dict:
 
@@ -19,5 +20,4 @@ for device in devices_dict:
     config_modules.debug_arp_cache(session)
     config_modules.debug_running_config(session)
 
-#TODO:
 
