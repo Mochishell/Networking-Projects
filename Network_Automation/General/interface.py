@@ -8,7 +8,7 @@ devices_creds = config_modules.get_device_creds_unencrypted('password.txt')
 
 devices_loopbacks_list = []
 #reading in loopbacks from csv
-with open('loopback.txt') as f:
+with open('interface.txt') as f:
     reader = csv.reader(f)
     for row in reader:
         devices_loopbacks_list.append(row)
