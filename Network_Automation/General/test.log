@@ -15574,3 +15574,1413 @@ S3(config)#interface Loopback0
 S3(config-if)#ip address 3.3.3.3 255.255.255.255
 S3(config-if)#end
 S3#
+DEBUG:paramiko.transport:starting thread (client mode): 0xbc4a0bb0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 192.168.254.11: b'97db548731a999141d8cc61b7c979acf'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S1#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al 
+DEBUG:netmiko:_read_channel_expect read_data: wid
+DEBUG:netmiko:_read_channel_expect read_data: th
+DEBUG:netmiko:_read_channel_expect read_data:  511
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S1#terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: ina
+DEBUG:netmiko:_read_channel_expect read_data: l le
+DEBUG:netmiko:_read_channel_expect read_data: ngt
+DEBUG:netmiko:_read_channel_expect read_data: h 0
+
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 
+S1#terminal length 0
+
+DEBUG:netmiko:
+S1#terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: S1#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igu
+DEBUG:netmiko:_read_channel_expect read_data: re
+DEBUG:netmiko:_read_channel_expect read_data:  ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al
+
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+
+DEBUG:netmiko:Pattern is: S1
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:Pattern found: S1 Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config)#
+DEBUG:netmiko:Pattern found: # 
+S1(config)#
+DEBUG:netmiko:write_channel: b'interface Loopback0\n'
+DEBUG:netmiko:Pattern is: interface\ Loopback0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nter
+DEBUG:netmiko:_read_channel_expect read_data: fac
+DEBUG:netmiko:_read_channel_expect read_data: e L
+DEBUG:netmiko:_read_channel_expect read_data: oopb
+DEBUG:netmiko:_read_channel_expect read_data: ack
+DEBUG:netmiko:_read_channel_expect read_data: 0
+
+DEBUG:netmiko:Pattern found: interface\ Loopback0 interface Loopback0
+
+DEBUG:netmiko:Pattern is: (?:S1|#)
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: (?:S1|#) S1(config-if)#
+DEBUG:netmiko:write_channel: b'ip address 1.1.1.1 255.255.255.255\n'
+DEBUG:netmiko:Pattern is: ip\ address\ 1\.1\.1\.1\ 255\.255\.255\.255
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: p a
+DEBUG:netmiko:_read_channel_expect read_data: ddre
+DEBUG:netmiko:_read_channel_expect read_data: ss 1
+DEBUG:netmiko:_read_channel_expect read_data: .1.
+DEBUG:netmiko:_read_channel_expect read_data: 1.1 
+DEBUG:netmiko:_read_channel_expect read_data: 255
+DEBUG:netmiko:_read_channel_expect read_data: .255
+DEBUG:netmiko:_read_channel_expect read_data: .25
+DEBUG:netmiko:_read_channel_expect read_data: 5.2
+DEBUG:netmiko:_read_channel_expect read_data: 55
+
+DEBUG:netmiko:Pattern found: ip\ address\ 1\.1\.1\.1\ 255\.255\.255\.255 ip address 1.1.1.1 255.255.255.255
+
+DEBUG:netmiko:Pattern is: (?:S1|#)
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: (?:S1|#) S1(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: # 
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:exit_config_mode: end
+S1#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#interface Loopback0
+S1(config-if)#ip address 1.1.1.1 255.255.255.255
+S1(config-if)#end
+S1#
+DEBUG:paramiko.transport:starting thread (client mode): 0xbc3bf400
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 192.168.254.12: b'f4f05348bf24b393ca8c647922b5f034'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S2#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al 
+DEBUG:netmiko:_read_channel_expect read_data: wid
+DEBUG:netmiko:_read_channel_expect read_data: th 5
+DEBUG:netmiko:_read_channel_expect read_data: 11
+
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S2#terminal width 511
+
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: S2#
+DEBUG:netmiko:_read_channel_expect read_data: te
+DEBUG:netmiko:_read_channel_expect read_data: rmin
+DEBUG:netmiko:_read_channel_expect read_data: al l
+DEBUG:netmiko:_read_channel_expect read_data: engt
+DEBUG:netmiko:_read_channel_expect read_data: h 0
+
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 S2#terminal length 0
+
+DEBUG:netmiko:S2#terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: S2#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S2#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S2#
+DEBUG:netmiko:Pattern found: # 
+S2#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igu
+DEBUG:netmiko:_read_channel_expect read_data: re 
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: ina
+DEBUG:netmiko:_read_channel_expect read_data: l
+
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+
+DEBUG:netmiko:Pattern is: S2
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+S2(config)#
+DEBUG:netmiko:Pattern found: S2 Enter configuration commands, one per line.  End with CNTL/Z.
+S2(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S2(config)#
+DEBUG:netmiko:Pattern found: # 
+S2(config)#
+DEBUG:netmiko:write_channel: b'interface Loopback0\n'
+DEBUG:netmiko:Pattern is: interface\ Loopback0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nte
+DEBUG:netmiko:_read_channel_expect read_data: rfa
+DEBUG:netmiko:_read_channel_expect read_data: ce 
+DEBUG:netmiko:_read_channel_expect read_data: Loop
+DEBUG:netmiko:_read_channel_expect read_data: bac
+DEBUG:netmiko:_read_channel_expect read_data: k0
+
+DEBUG:netmiko:Pattern found: interface\ Loopback0 interface Loopback0
+
+DEBUG:netmiko:Pattern is: (?:S2|#)
+DEBUG:netmiko:_read_channel_expect read_data: S2(config-if)#
+DEBUG:netmiko:Pattern found: (?:S2|#) S2(config-if)#
+DEBUG:netmiko:write_channel: b'ip address 2.2.2.2 255.255.255.255\n'
+DEBUG:netmiko:Pattern is: ip\ address\ 2\.2\.2\.2\ 255\.255\.255\.255
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: p a
+DEBUG:netmiko:_read_channel_expect read_data: ddr
+DEBUG:netmiko:_read_channel_expect read_data: ess 
+DEBUG:netmiko:_read_channel_expect read_data: 2.2
+DEBUG:netmiko:_read_channel_expect read_data: .2.2
+DEBUG:netmiko:_read_channel_expect read_data:  25
+DEBUG:netmiko:_read_channel_expect read_data: 5.25
+DEBUG:netmiko:_read_channel_expect read_data: 5.2
+DEBUG:netmiko:_read_channel_expect read_data: 55.
+DEBUG:netmiko:_read_channel_expect read_data: 255
+
+DEBUG:netmiko:Pattern found: ip\ address\ 2\.2\.2\.2\ 255\.255\.255\.255 ip address 2.2.2.2 255.255.255.255
+
+DEBUG:netmiko:Pattern is: (?:S2|#)
+DEBUG:netmiko:_read_channel_expect read_data: S2(config-if)#
+DEBUG:netmiko:Pattern found: (?:S2|#) S2(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S2(config-if)#
+DEBUG:netmiko:Pattern found: # 
+S2(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: S2#
+DEBUG:netmiko:Pattern found: # S2#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S2#
+DEBUG:netmiko:Pattern found: # 
+S2#
+DEBUG:netmiko:exit_config_mode: end
+S2#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S2(config)#interface Loopback0
+S2(config-if)#ip address 2.2.2.2 255.255.255.255
+S2(config-if)#end
+S2#
+DEBUG:paramiko.transport:starting thread (client mode): 0xbc3ca520
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 192.168.254.13: b'a0f6ebda3c10c36d7ceb011ec3711919'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S3#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: mina
+DEBUG:netmiko:_read_channel_expect read_data: l w
+DEBUG:netmiko:_read_channel_expect read_data: idth
+DEBUG:netmiko:_read_channel_expect read_data:  51
+DEBUG:netmiko:_read_channel_expect read_data: 1
+
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S3#terminal width 511
+
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: S3#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al 
+DEBUG:netmiko:_read_channel_expect read_data: leng
+DEBUG:netmiko:_read_channel_expect read_data: th 
+DEBUG:netmiko:_read_channel_expect read_data: 0
+S3#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 S3#terminal length 0
+S3#
+DEBUG:netmiko:S3#terminal length 0
+S3#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S3#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S3#
+DEBUG:netmiko:Pattern found: # 
+S3#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igu
+DEBUG:netmiko:_read_channel_expect read_data: re
+DEBUG:netmiko:_read_channel_expect read_data:  ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al
+
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+
+DEBUG:netmiko:Pattern is: S3
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+S3(config)#
+DEBUG:netmiko:Pattern found: S3 Enter configuration commands, one per line.  End with CNTL/Z.
+S3(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S3(config)#
+DEBUG:netmiko:Pattern found: # 
+S3(config)#
+DEBUG:netmiko:write_channel: b'interface Loopback0\n'
+DEBUG:netmiko:Pattern is: interface\ Loopback0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nte
+DEBUG:netmiko:_read_channel_expect read_data: rfa
+DEBUG:netmiko:_read_channel_expect read_data: ce L
+DEBUG:netmiko:_read_channel_expect read_data: oop
+DEBUG:netmiko:_read_channel_expect read_data: bac
+DEBUG:netmiko:_read_channel_expect read_data: k0
+
+DEBUG:netmiko:Pattern found: interface\ Loopback0 interface Loopback0
+
+DEBUG:netmiko:Pattern is: (?:S3|#)
+DEBUG:netmiko:_read_channel_expect read_data: S3(config-if)#
+DEBUG:netmiko:Pattern found: (?:S3|#) S3(config-if)#
+DEBUG:netmiko:write_channel: b'ip address 3.3.3.3 255.255.255.255\n'
+DEBUG:netmiko:Pattern is: ip\ address\ 3\.3\.3\.3\ 255\.255\.255\.255
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: p a
+DEBUG:netmiko:_read_channel_expect read_data: ddr
+DEBUG:netmiko:_read_channel_expect read_data: ess
+DEBUG:netmiko:_read_channel_expect read_data:  3.
+DEBUG:netmiko:_read_channel_expect read_data: 3.3.
+DEBUG:netmiko:_read_channel_expect read_data: 3 2
+DEBUG:netmiko:_read_channel_expect read_data: 55.
+DEBUG:netmiko:_read_channel_expect read_data: 255
+DEBUG:netmiko:_read_channel_expect read_data: .25
+DEBUG:netmiko:_read_channel_expect read_data: 5.2
+DEBUG:netmiko:_read_channel_expect read_data: 55
+
+DEBUG:netmiko:Pattern found: ip\ address\ 3\.3\.3\.3\ 255\.255\.255\.255 ip address 3.3.3.3 255.255.255.255
+
+DEBUG:netmiko:Pattern is: (?:S3|#)
+DEBUG:netmiko:_read_channel_expect read_data: S3(config-if)#
+DEBUG:netmiko:Pattern found: (?:S3|#) S3(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S3(config-if)#
+DEBUG:netmiko:Pattern found: # 
+S3(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: S3#
+DEBUG:netmiko:Pattern found: # S3#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S3#
+DEBUG:netmiko:Pattern found: # 
+S3#
+DEBUG:netmiko:exit_config_mode: end
+S3#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S3(config)#interface Loopback0
+S3(config-if)#ip address 3.3.3.3 255.255.255.255
+S3(config-if)#end
+S3#
+DEBUG:paramiko.transport:starting thread (client mode): 0xbc3cf940
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 192.168.254.11: b'97db548731a999141d8cc61b7c979acf'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S1#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al 
+DEBUG:netmiko:_read_channel_expect read_data: widt
+DEBUG:netmiko:_read_channel_expect read_data: h 5
+DEBUG:netmiko:_read_channel_expect read_data: 11
+
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S1#terminal width 511
+
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:_read_channel_expect read_data: te
+DEBUG:netmiko:_read_channel_expect read_data: rmin
+DEBUG:netmiko:_read_channel_expect read_data: al 
+DEBUG:netmiko:_read_channel_expect read_data: leng
+DEBUG:netmiko:_read_channel_expect read_data: th 0
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 S1#terminal length 0
+DEBUG:netmiko:S1#terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:read_channel: 
+S1#
+S1#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: on
+DEBUG:netmiko:_read_channel_expect read_data: fig
+DEBUG:netmiko:_read_channel_expect read_data: ure
+DEBUG:netmiko:_read_channel_expect read_data:  ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al
+
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+
+DEBUG:netmiko:Pattern is: S1
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:Pattern found: S1 Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config)#
+DEBUG:netmiko:Pattern found: # 
+S1(config)#
+DEBUG:netmiko:write_channel: b'interface g0/2\n'
+DEBUG:netmiko:Pattern is: interface\ g0/2
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nte
+DEBUG:netmiko:_read_channel_expect read_data: rfac
+DEBUG:netmiko:_read_channel_expect read_data: e g
+DEBUG:netmiko:_read_channel_expect read_data: 0/2
+
+DEBUG:netmiko:Pattern found: interface\ g0/2 interface g0/2
+
+DEBUG:netmiko:Pattern is: (?:S1|#)
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: (?:S1|#) S1(config-if)#
+DEBUG:netmiko:write_channel: b'ip address 5.5.5.5 255.255.255.0\n'
+DEBUG:netmiko:Pattern is: ip\ address\ 5\.5\.5\.5\ 255\.255\.255\.0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: p a
+DEBUG:netmiko:_read_channel_expect read_data: ddre
+DEBUG:netmiko:_read_channel_expect read_data: ss 
+DEBUG:netmiko:_read_channel_expect read_data: 5.5
+DEBUG:netmiko:_read_channel_expect read_data: .5.
+DEBUG:netmiko:_read_channel_expect read_data: 5 25
+DEBUG:netmiko:_read_channel_expect read_data: 5.2
+DEBUG:netmiko:_read_channel_expect read_data: 55.2
+DEBUG:netmiko:_read_channel_expect read_data: 55.
+DEBUG:netmiko:_read_channel_expect read_data: 0
+
+DEBUG:netmiko:Pattern found: ip\ address\ 5\.5\.5\.5\ 255\.255\.255\.0 ip address 5.5.5.5 255.255.255.0
+
+DEBUG:netmiko:Pattern is: (?:S1|#)
+DEBUG:netmiko:_read_channel_expect read_data:                    ^
+% Invalid input detected at '^' marker.
+
+S1(config-if)#
+DEBUG:netmiko:Pattern found: (?:S1|#)                    ^
+% Invalid input detected at '^' marker.
+
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: # 
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+DEBUG:netmiko:Pattern found: end end
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:exit_config_mode: end
+S1#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#interface g0/2
+S1(config-if)#ip address 5.5.5.5 255.255.255.0
+                   ^
+% Invalid input detected at '^' marker.
+
+S1(config-if)#end
+S1#
+DEBUG:paramiko.transport:starting thread (client mode): 0x74c3bb0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 192.168.254.11: b'97db548731a999141d8cc61b7c979acf'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S1#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al 
+DEBUG:netmiko:_read_channel_expect read_data: wid
+DEBUG:netmiko:_read_channel_expect read_data: th 5
+DEBUG:netmiko:_read_channel_expect read_data: 11
+
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S1#terminal width 511
+
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al l
+DEBUG:netmiko:_read_channel_expect read_data: eng
+DEBUG:netmiko:_read_channel_expect read_data: th 
+DEBUG:netmiko:_read_channel_expect read_data: 0
+S1#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 S1#terminal length 0
+S1#
+DEBUG:netmiko:S1#terminal length 0
+S1#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igu
+DEBUG:netmiko:_read_channel_expect read_data: re t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: inal
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+DEBUG:netmiko:Pattern is: S1
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:Pattern found: S1 
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config)#
+DEBUG:netmiko:Pattern found: # 
+S1(config)#
+DEBUG:netmiko:write_channel: b'interface Loopback0\n'
+DEBUG:netmiko:Pattern is: interface\ Loopback0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nte
+DEBUG:netmiko:_read_channel_expect read_data: rfa
+DEBUG:netmiko:_read_channel_expect read_data: ce L
+DEBUG:netmiko:_read_channel_expect read_data: oop
+DEBUG:netmiko:_read_channel_expect read_data: bac
+DEBUG:netmiko:_read_channel_expect read_data: k0
+
+DEBUG:netmiko:Pattern found: interface\ Loopback0 interface Loopback0
+
+DEBUG:netmiko:Pattern is: (?:S1|#)
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: (?:S1|#) S1(config-if)#
+DEBUG:netmiko:write_channel: b'ip address 1.1.1.1 255.255.255.255\n'
+DEBUG:netmiko:Pattern is: ip\ address\ 1\.1\.1\.1\ 255\.255\.255\.255
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: p a
+DEBUG:netmiko:_read_channel_expect read_data: ddr
+DEBUG:netmiko:_read_channel_expect read_data: ess
+DEBUG:netmiko:_read_channel_expect read_data:  1.1
+DEBUG:netmiko:_read_channel_expect read_data: .1.
+DEBUG:netmiko:_read_channel_expect read_data: 1 2
+DEBUG:netmiko:_read_channel_expect read_data: 55.2
+DEBUG:netmiko:_read_channel_expect read_data: 55.
+DEBUG:netmiko:_read_channel_expect read_data: 255.
+DEBUG:netmiko:_read_channel_expect read_data: 255
+DEBUG:netmiko:Pattern found: ip\ address\ 1\.1\.1\.1\ 255\.255\.255\.255 ip address 1.1.1.1 255.255.255.255
+DEBUG:netmiko:Pattern is: (?:S1|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: (?:S1|#) 
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: # 
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:exit_config_mode: end
+S1#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#interface Loopback0
+S1(config-if)#ip address 1.1.1.1 255.255.255.255
+S1(config-if)#end
+S1#
+DEBUG:paramiko.transport:starting thread (client mode): 0x73e1400
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 192.168.254.12: b'f4f05348bf24b393ca8c647922b5f034'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S2#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al w
+DEBUG:netmiko:_read_channel_expect read_data: idt
+DEBUG:netmiko:_read_channel_expect read_data: h 51
+DEBUG:netmiko:_read_channel_expect read_data: 1
+S2#
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S2#terminal width 511
+S2#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: inal
+DEBUG:netmiko:_read_channel_expect read_data:  len
+DEBUG:netmiko:_read_channel_expect read_data: gth
+DEBUG:netmiko:_read_channel_expect read_data:  0
+S2#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+S2#
+DEBUG:netmiko:terminal length 0
+S2#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S2#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S2#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S2#
+DEBUG:netmiko:Pattern found: # 
+S2#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igu
+DEBUG:netmiko:_read_channel_expect read_data: re t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: inal
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+DEBUG:netmiko:Pattern is: S2
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+S2(config)#
+DEBUG:netmiko:Pattern found: S2 
+Enter configuration commands, one per line.  End with CNTL/Z.
+S2(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S2(config)#
+DEBUG:netmiko:Pattern found: # 
+S2(config)#
+DEBUG:netmiko:write_channel: b'interface Loopback0\n'
+DEBUG:netmiko:Pattern is: interface\ Loopback0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nte
+DEBUG:netmiko:_read_channel_expect read_data: rfa
+DEBUG:netmiko:_read_channel_expect read_data: ce L
+DEBUG:netmiko:_read_channel_expect read_data: oop
+DEBUG:netmiko:_read_channel_expect read_data: bac
+DEBUG:netmiko:_read_channel_expect read_data: k0
+
+DEBUG:netmiko:Pattern found: interface\ Loopback0 interface Loopback0
+
+DEBUG:netmiko:Pattern is: (?:S2|#)
+DEBUG:netmiko:_read_channel_expect read_data: S2(config-if)#
+DEBUG:netmiko:Pattern found: (?:S2|#) S2(config-if)#
+DEBUG:netmiko:write_channel: b'ip address 2.2.2.2 255.255.255.255\n'
+DEBUG:netmiko:Pattern is: ip\ address\ 2\.2\.2\.2\ 255\.255\.255\.255
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: p a
+DEBUG:netmiko:_read_channel_expect read_data: ddr
+DEBUG:netmiko:_read_channel_expect read_data: ess
+DEBUG:netmiko:_read_channel_expect read_data:  2.
+DEBUG:netmiko:_read_channel_expect read_data: 2.2
+DEBUG:netmiko:_read_channel_expect read_data: .2 2
+DEBUG:netmiko:_read_channel_expect read_data: 55
+DEBUG:netmiko:_read_channel_expect read_data: .255
+DEBUG:netmiko:_read_channel_expect read_data: .2
+DEBUG:netmiko:_read_channel_expect read_data: 55.2
+DEBUG:netmiko:_read_channel_expect read_data: 55
+
+DEBUG:netmiko:Pattern found: ip\ address\ 2\.2\.2\.2\ 255\.255\.255\.255 ip address 2.2.2.2 255.255.255.255
+
+DEBUG:netmiko:Pattern is: (?:S2|#)
+DEBUG:netmiko:_read_channel_expect read_data: S2(config-if)#
+DEBUG:netmiko:Pattern found: (?:S2|#) S2(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S2(config-if)#
+DEBUG:netmiko:Pattern found: # 
+S2(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: S2#
+DEBUG:netmiko:Pattern found: # S2#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S2#
+DEBUG:netmiko:Pattern found: # 
+S2#
+DEBUG:netmiko:exit_config_mode: end
+S2#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S2(config)#interface Loopback0
+S2(config-if)#ip address 2.2.2.2 255.255.255.255
+S2(config-if)#end
+S2#
+DEBUG:paramiko.transport:starting thread (client mode): 0x73ec820
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 192.168.254.13: b'a0f6ebda3c10c36d7ceb011ec3711919'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S3#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: mina
+DEBUG:netmiko:_read_channel_expect read_data: l w
+DEBUG:netmiko:_read_channel_expect read_data: idt
+DEBUG:netmiko:_read_channel_expect read_data: h 51
+DEBUG:netmiko:_read_channel_expect read_data: 1
+S3#
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S3#terminal width 511
+S3#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: inal
+DEBUG:netmiko:_read_channel_expect read_data:  le
+DEBUG:netmiko:_read_channel_expect read_data: ngth
+DEBUG:netmiko:_read_channel_expect read_data:  0
+
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+
+DEBUG:netmiko:terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: S3#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S3#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S3#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S3#
+DEBUG:netmiko:Pattern found: # 
+S3#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igu
+DEBUG:netmiko:_read_channel_expect read_data: re 
+DEBUG:netmiko:_read_channel_expect read_data: term
+DEBUG:netmiko:_read_channel_expect read_data: ina
+DEBUG:netmiko:_read_channel_expect read_data: l
+
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+
+DEBUG:netmiko:Pattern is: S3
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+S3(config)#
+DEBUG:netmiko:Pattern found: S3 Enter configuration commands, one per line.  End with CNTL/Z.
+S3(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S3(config)#
+DEBUG:netmiko:Pattern found: # 
+S3(config)#
+DEBUG:netmiko:write_channel: b'interface Loopback0\n'
+DEBUG:netmiko:Pattern is: interface\ Loopback0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nte
+DEBUG:netmiko:_read_channel_expect read_data: rfa
+DEBUG:netmiko:_read_channel_expect read_data: ce 
+DEBUG:netmiko:_read_channel_expect read_data: Loo
+DEBUG:netmiko:_read_channel_expect read_data: pba
+DEBUG:netmiko:_read_channel_expect read_data: ck0
+
+DEBUG:netmiko:Pattern found: interface\ Loopback0 interface Loopback0
+
+DEBUG:netmiko:Pattern is: (?:S3|#)
+DEBUG:netmiko:_read_channel_expect read_data: S3(config-if)#
+DEBUG:netmiko:Pattern found: (?:S3|#) S3(config-if)#
+DEBUG:netmiko:write_channel: b'ip address 3.3.3.3 255.255.255.255\n'
+DEBUG:netmiko:Pattern is: ip\ address\ 3\.3\.3\.3\ 255\.255\.255\.255
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: p a
+DEBUG:netmiko:_read_channel_expect read_data: ddr
+DEBUG:netmiko:_read_channel_expect read_data: ess 
+DEBUG:netmiko:_read_channel_expect read_data: 3.3
+DEBUG:netmiko:_read_channel_expect read_data: .3.3
+DEBUG:netmiko:_read_channel_expect read_data:  25
+DEBUG:netmiko:_read_channel_expect read_data: 5.25
+DEBUG:netmiko:_read_channel_expect read_data: 5.2
+DEBUG:netmiko:_read_channel_expect read_data: 55.2
+DEBUG:netmiko:_read_channel_expect read_data: 55
+
+DEBUG:netmiko:Pattern found: ip\ address\ 3\.3\.3\.3\ 255\.255\.255\.255 ip address 3.3.3.3 255.255.255.255
+
+DEBUG:netmiko:Pattern is: (?:S3|#)
+DEBUG:netmiko:_read_channel_expect read_data: S3(config-if)#
+DEBUG:netmiko:Pattern found: (?:S3|#) S3(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S3(config-if)#
+DEBUG:netmiko:Pattern found: # 
+S3(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: S3#
+DEBUG:netmiko:Pattern found: # S3#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S3#
+DEBUG:netmiko:Pattern found: # 
+S3#
+DEBUG:netmiko:exit_config_mode: end
+S3#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S3(config)#interface Loopback0
+S3(config-if)#ip address 3.3.3.3 255.255.255.255
+S3(config-if)#end
+S3#
+DEBUG:paramiko.transport:starting thread (client mode): 0x73f19d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.2
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-cbc', '3des-cbc', 'aes192-cbc', 'aes256-cbc'] client mac:['hmac-sha1', 'hmac-sha1-96'] server mac:['hmac-sha1', 'hmac-sha1-96'] client compress:['none'] server compress:['none'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey agreed: ssh-rsa
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha1
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 192.168.254.11: b'97db548731a999141d8cc61b7c979acf'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S1#
+DEBUG:netmiko:_read_channel_expect read_data: te
+DEBUG:netmiko:_read_channel_expect read_data: rmi
+DEBUG:netmiko:_read_channel_expect read_data: nal
+DEBUG:netmiko:_read_channel_expect read_data:  wid
+DEBUG:netmiko:_read_channel_expect read_data: th 
+DEBUG:netmiko:_read_channel_expect read_data: 511
+
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+S1#terminal width 511
+
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al 
+DEBUG:netmiko:_read_channel_expect read_data: len
+DEBUG:netmiko:_read_channel_expect read_data: gth
+DEBUG:netmiko:_read_channel_expect read_data:  0
+
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 S1#terminal length 0
+
+DEBUG:netmiko:S1#terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: S1#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+S1#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igu
+DEBUG:netmiko:_read_channel_expect read_data: re 
+DEBUG:netmiko:_read_channel_expect read_data: ter
+DEBUG:netmiko:_read_channel_expect read_data: min
+DEBUG:netmiko:_read_channel_expect read_data: al
+
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+
+DEBUG:netmiko:Pattern is: S1
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:Pattern found: S1 Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config)#
+DEBUG:netmiko:Pattern found: # 
+S1(config)#
+DEBUG:netmiko:write_channel: b'interface vlan2\n'
+DEBUG:netmiko:Pattern is: interface\ vlan2
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nte
+DEBUG:netmiko:_read_channel_expect read_data: rfac
+DEBUG:netmiko:_read_channel_expect read_data: e v
+DEBUG:netmiko:_read_channel_expect read_data: lan
+DEBUG:netmiko:_read_channel_expect read_data: 2
+
+DEBUG:netmiko:Pattern found: interface\ vlan2 interface vlan2
+
+DEBUG:netmiko:Pattern is: (?:S1|#)
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: (?:S1|#) S1(config-if)#
+DEBUG:netmiko:write_channel: b'ip address 5.5.5.5 255.255.255.0\n'
+DEBUG:netmiko:Pattern is: ip\ address\ 5\.5\.5\.5\ 255\.255\.255\.0
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: p 
+DEBUG:netmiko:_read_channel_expect read_data: add
+DEBUG:netmiko:_read_channel_expect read_data: res
+DEBUG:netmiko:_read_channel_expect read_data: s 5
+DEBUG:netmiko:_read_channel_expect read_data: .5.
+DEBUG:netmiko:_read_channel_expect read_data: 5.5
+DEBUG:netmiko:_read_channel_expect read_data:  255
+DEBUG:netmiko:_read_channel_expect read_data: .25
+DEBUG:netmiko:_read_channel_expect read_data: 5.25
+DEBUG:netmiko:_read_channel_expect read_data: 5.
+DEBUG:netmiko:_read_channel_expect read_data: 0
+
+DEBUG:netmiko:Pattern found: ip\ address\ 5\.5\.5\.5\ 255\.255\.255\.0 ip address 5.5.5.5 255.255.255.0
+
+DEBUG:netmiko:Pattern is: (?:S1|#)
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: (?:S1|#) S1(config-if)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1(config-if)#
+DEBUG:netmiko:Pattern found: # 
+S1(config-if)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # S1#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: S1#
+DEBUG:netmiko:Pattern found: # 
+S1#
+DEBUG:netmiko:exit_config_mode: end
+S1#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#interface vlan2
+S1(config-if)#ip address 5.5.5.5 255.255.255.0
+S1(config-if)#end
+S1#

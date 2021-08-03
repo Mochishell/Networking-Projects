@@ -14,6 +14,7 @@ def config_general(session, config_file):
         print(session.send_config_set(commands))
 
 #configures loopback with ip on specified interface
+#parameters are based off loopback.txt
 def config_loopback(session, interface, ip, subnet_mask):
     print('Configuring interface for {}'.format(session.host))
     commands = ['interface {}'.format(interface), 'ip address {} {}'.format(ip, subnet_mask)]
