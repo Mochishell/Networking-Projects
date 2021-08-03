@@ -3,8 +3,8 @@ This project will be for running various show commands and saving their outputs 
 
 # Usage
 To use this script in your own environment, modify devices.txt and password.txt to fit your local environment. Make sure SSH is already pre enabled on your devices.
-Note that the `devices.txt` and `password.txt` are symlinks pointing to their respective files in `Network_Automation`
-Make sure there are no spaces after commas in devices.txt and password.txt
+Note that the `devices.txt` and `password.txt` are symlinks pointing to their respective files in `Network_Automation`.
+Make sure there are no spaces after commas in devices.txt and password.txt.
 
 # Functionality
 - Saves arp cache to file per device
