@@ -1,0 +1,6 @@
+#.gitignore file
+*.log
+*arp.txt
+*running_config.txt
+errors.txt
+*tar.gz
