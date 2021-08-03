@@ -14,9 +14,9 @@ def config_general(session, config_file):
         print(session.send_config_set(commands))
 
 #configures loopback with ip on specified interface
-def config_loopback(session, interface, ip):
-    print('Configuring loopback for {}'.format(session.host))
-    commands = ['interface {}'.format(interface), 'ip address {} 255.255.255.255'.format(ip)]
+def config_loopback(session, interface, ip, subnet_mask):
+    print('Configuring interface for {}'.format(session.host))
+    commands = ['interface {}'.format(interface), 'ip address {} {}'.format(ip, subnet_mask)]
     print(session.send_config_set(commands))
 
 #returns a dictionary of devices, key is ip address of device
