@@ -2,10 +2,14 @@ from netmiko import ConnectHandler
 import config_modules
 from multiprocessing.dummy import Pool as ThreadPool
 import threading
+import time
 
 num_threads = 6
 
 def main():
+
+    #saving starting time
+    start = time.time()
 
     #creating 2 dictionaries, one of devices and one of devices and passwords, keys are IP addresses
     devices_dict = config_modules.read_devices('devices.txt')
@@ -29,6 +33,9 @@ def main():
     running_config_results = threads.map(config_modules.debug_running_config, config_param_list)
     threads.close()
     threads.join()
+
+    #printing elapsed time
+    print ( 'Time elapsed: {} seconds'.format(time.time() - start))
 
 if __name__ == "__main__":
     main()
